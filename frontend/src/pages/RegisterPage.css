@@ -1,0 +1,82 @@
+.registerpage {
+  max-width: 40rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+}
+
+.registerpage__title {
+  font-size: 1.3rem;
+  color: green;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #cecece;
+}
+
+.registerpage__input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border-bottom: solid 1px #cecece;
+  padding-bottom: 1.5rem;
+}
+
+.registerpage__input > input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: solid 1px #cecece;
+}
+
+
+
+
+.registerpage__input > input:focus {
+  outline: none;
+  border-color: #858585;
+}
+
+.registerpage__form > button {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: green;
+  color: #fff;
+  border: solid 1px rgb(0, 73, 0);
+  border-radius: 4px;
+}
+
+.registerpage__form > button:hover {
+  cursor: pointer;
+  background: darkgreen;
+}
+
+.registerpage__inputerror{
+  border: solid 1px red !important;
+
+}
+
+@media screen and (max-width:640px) {
+  .registerpage__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .registerpage {
+    max-width: 35rem;
+  }
+}
+
+@media screen and (max-width:540px) {
+  .registerpage__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .registerpage {
+    max-width: 25rem;
+  }
+}

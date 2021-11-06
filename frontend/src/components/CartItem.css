@@ -1,0 +1,44 @@
+.cartitem{
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+    gap:0.5rem;
+    background: #fff;
+    border-radius: 2px;
+    place-items: center ;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.cartitem__image{
+    padding-top: 3px;
+}
+
+.cartitem__name{
+    color: #171717;
+    text-decoration: none;
+}
+
+.cartitem_name:hover{
+    color: #dd219e;
+}
+
+.cartitem__select{
+    padding: 0.5rem 0.5rem;
+}
+
+.cartitem__deleteBtn{
+    padding: 0.6rem 1rem;
+    color:rgb(233, 12, 12);
+    background: #f4f4f4;
+    border: 1px solid #171717;
+    cursor: pointer;
+
+}
+
+.cartitem__deleteBtn:hover,
+.cartitem__deleteBtn:focus,
+.cartitem__deleteBtn:active{
+background: #171717;
+}
+

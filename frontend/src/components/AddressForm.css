@@ -1,0 +1,109 @@
+.addressform {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.addressform__title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.addressform__input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 40rem;
+}
+
+.addressform__back {
+  padding: 0.5rem 0.7rem;
+  background: #f4f4f4;
+  color: #171717;
+  border: 1px solid #a9a9ac;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.addressform__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.addressform__next {
+  padding: 0.5rem 0.7rem;
+  background: #171717;
+  color: #f4f4f4;
+  border: 1px solid #171717;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/*  */
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #a9a9ac;
+
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box input:hover {
+  color: black;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 0;
+  font-size: 1rem;
+  color: black;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.login-box .user-box input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: black ;
+  font-size: 0.8rem;
+}
+
+.login-box .user-box input:focus::placeholder  {
+  transition: 0.3s;
+  color: transparent ;
+}
+
+.login-box .user-box input ~ label {
+  color: transparent;
+}
+
+.user-box-error label {
+  color: red !important;
+}
+
+
+.user-box-error input::placeholder {
+  color: transparent ;
+}
+
+@media screen and (max-width: 640px) {
+  .addressform__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 25rem;
+  }
+
+  .addressform__wrapper__next {
+    display: flex;
+  }
+}

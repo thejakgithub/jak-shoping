@@ -1,0 +1,124 @@
+.product {
+  width: 19rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgb(0, 0, 0, 0.4);
+  display: flex;
+  margin: 0.5rem auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product__info > img {
+  height: 11rem;
+  border-radius: 0.5rem;
+}
+
+.product__info > p {
+  margin: 0.5rem 0;
+}
+
+.info__price {
+  font-weight: bold;
+}
+
+.info__name {
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.info__description {
+  font-size: 0.8rem;
+}
+
+.info__button {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #171717;
+  background: #f4f4f4;
+  padding: 0.5rem 1rem;
+  border: 1px solid #171717;
+  font-size: 1rem;
+}
+
+.info__button:hover {
+  background: #171717;
+  color: #f4f4f4;
+}
+
+@media screen and (max-width: 1249px) {
+  .product {
+    width: 22rem;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .product {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .product {
+      width: 19rem;
+    }
+  }
+
+@media screen and (max-width: 950px) {
+  .product {
+    width: 19rem;
+  }
+}
+
+
+
+@media screen and (max-width: 830px) {
+  .product {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .product {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .product {
+    width: 19rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .product {
+    width: 25.5rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .product {
+    width: 22.5rem;
+  }
+}
+
+@media screen and (max-width: 813px) and (orientation: landscape) {
+  .product {
+    width: 23rem;
+  }
+}
+
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .product {
+    width: 16rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .product {
+    width: 16rem;
+  }
+}
