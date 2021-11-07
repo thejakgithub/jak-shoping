@@ -1,6 +1,7 @@
 const Member = require("../models/Member");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { connections } = require("mongoose");
 
 //Login
 
@@ -75,7 +76,7 @@ const login = async (req, res) => {
       res.status(400).send("All input is required");
     }
 
-    const member = await Member.findOne({ email });
+     const member = await Member.findOne({ email });
 
     if (member && (await bcrypt.compare(password, member.password))) {
       //Create token
@@ -96,7 +97,7 @@ const login = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.status(200).send(member.firstName);
+  res.status(200).send(res);
 };
 
   const welcome = async (req,res) =>{
