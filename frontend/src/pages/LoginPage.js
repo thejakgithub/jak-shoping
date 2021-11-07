@@ -32,10 +32,9 @@ const LoginPage = () => {
       .post(`${base_url}/login`, data)
       .then((res) => {
         if (res) {
-          console.log(res);
-          localStorage.setItem("token",  res.data.token);
-          localStorage.setItem("memberName", res.data.firstName);
-        //  window.location.href = "/";
+        //  localStorage.setItem("token",  res.data.token);
+          localStorage.setItem("memberName", res.data);
+          window.location.href = "/";
         }
       })
       .catch((err) => {
