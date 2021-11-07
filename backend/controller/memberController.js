@@ -79,6 +79,8 @@ const login = async (req, res) => {
      const member = await Member.findOne({ email });
 
     if (member && (await bcrypt.compare(password, member.password))) {
+
+      var firstName   =  member.firstName;
       //Create token
       const token = jwt.sign(
         { memberId: member._id, email },
@@ -97,7 +99,7 @@ const login = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.status(200).send(res);
+  res.status(200).send(firstName);
 };
 
   const welcome = async (req,res) =>{
