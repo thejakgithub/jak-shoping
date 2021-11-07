@@ -27,13 +27,15 @@ const LoginPage = () => {
   const [errorSubmit, setErrorSubmit] = useState(false);
 
   const loginHandler = (data) => {
+
     axios
       .post(`${base_url}/login`, data)
       .then((res) => {
         if (res) {
-          localStorage.setItem("token", res.data.token);
+          console.log(res);
+          localStorage.setItem("token",  res.data.token);
           localStorage.setItem("memberName", res.data.firstName);
-          window.location.href = "/";
+        //  window.location.href = "/";
         }
       })
       .catch((err) => {

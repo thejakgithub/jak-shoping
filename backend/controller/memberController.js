@@ -88,7 +88,6 @@ const login = async (req, res) => {
       );
       //save user token
       member.token = token;
-
       res.status(200).json(member);
       return;
     }
@@ -97,7 +96,7 @@ const login = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.status(200).send("Login Success");
+  res.status(200).send(member.firstName);
 };
 
   const welcome = async (req,res) =>{

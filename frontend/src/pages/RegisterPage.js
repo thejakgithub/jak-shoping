@@ -35,7 +35,7 @@ const RegisterPage = () => {
         if(res){
           alert("สมัครสมาชิกสำเร็จ");
           console.log(res.data);
-           // history.push("/login");
+          history.push("/login");
         }
       
        
