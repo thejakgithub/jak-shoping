@@ -85,6 +85,8 @@ const login = async (req, res) => {
         firstName:member.firstName,
         lastName: member.lastName,
         email:member.email,
+        address:member.address,
+        city:member.city,
         postalCode:member.postalCode,
         tel:member.tel
       }
