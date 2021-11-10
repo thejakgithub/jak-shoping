@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/product/:id" component={ProductPage} />
           <Route exact path="/cart" component={CartPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
-          <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path="/register" component={RegisterPage} />
         </Switch>
       </main>

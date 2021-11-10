@@ -1,0 +1,14 @@
+.successform{
+    margin: 1.5rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    width: 40rem;
+}
+
+.successform__title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #dd219e;
+  }

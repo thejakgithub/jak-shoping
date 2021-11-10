@@ -18,6 +18,7 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     origin: ["https://jak-shopping.netlify.app"],
+    //origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE","OPTION"],
     credentials: true,
   })

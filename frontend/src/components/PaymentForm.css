@@ -1,0 +1,98 @@
+.paymentform {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.paymentform__title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  color: #dd219e;
+}
+
+.line{
+  margin: 1rem 0;
+}
+
+.paymentform__input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 40rem;
+}
+
+.paymentform__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 40rem;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment__title {
+
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  color: #dd219e;
+}
+
+.label__file {
+  color: #8f8f8f;
+  font-size: 0.8rem;
+}
+
+.alert__file {
+  padding: 0.5rem;
+  background-color: #dd219e; 
+  color: white;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+.img__content {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.file__img {
+  width: 15rem;
+}
+.btn__content{
+    text-align: center;
+    margin-top: 1rem;
+}
+.btn__payment{
+    width: 15rem;
+    padding: 0.5rem;
+    background-color: #dd219e;
+    color: #fff;
+    border-radius: 2px;
+    border: #ff00aa;
+    cursor: pointer;   
+}
+
+.p__file{
+    margin-top: 1rem;
+    color: #f44336;
+}
+
+@media screen and (max-width: 640px) {
+  .paymentform__input {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 25rem;
+  }
+
+  .paymentform__products {
+    width: 25rem;
+  }
+}

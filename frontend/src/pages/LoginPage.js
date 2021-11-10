@@ -33,7 +33,8 @@ const LoginPage = () => {
       .then((res) => {
         if (res) {
         //  localStorage.setItem("token",  res.data.token);
-          localStorage.setItem("memberName", res.data);
+          // localStorage.setItem("memberName", res.data);
+          localStorage.setItem("paymentAddress", JSON.stringify(res.data));
           window.location.href = "/";
         }
       })

@@ -1,10 +1,13 @@
 import "./AddressForm.css";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import DataContext from "../data/DataContext";
 import { Link } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-const AddressForm = ({ setActiveStep,setPaymentAddress }) => {
+const AddressForm = () => {
+  const { setPaymentAddress, setActiveStep } = useContext(DataContext);
   const schema = yup.object().shape({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
@@ -89,11 +92,7 @@ const AddressForm = ({ setActiveStep,setPaymentAddress }) => {
               errors.postalCode ? "user-box user-box-error " : "user-box"
             }
           >
-            <input
-              {...register("tel")}
-              type="number"
-              placeholder="เบอร์โทร"
-            />
+            <input {...register("tel")} type="number" placeholder="เบอร์โทร" />
             <label>เบอร์โทร{errors.tel && "*"}</label>
           </div>
         </div>

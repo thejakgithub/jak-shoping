@@ -81,7 +81,13 @@ const login = async (req, res) => {
 
     if (member && (await bcrypt.compare(password, member.password))) {
 
-      var firstName   =  member.firstName;
+      var paymentAddress   =  {
+        firstName:member.firstName,
+        lastName: member.lastName,
+        email:member.email,
+        postalCode:member.postalCode,
+        tel:member.tel
+      }
       //Create token
       const token = jwt.sign(
         { memberId: member._id, email },
@@ -100,7 +106,7 @@ const login = async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-  res.status(200).send(firstName);
+  res.status(200).send(paymentAddress);
 };
 
   const welcome = async (req,res) =>{

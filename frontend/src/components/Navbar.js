@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 function Navbar({ click }) {
   let history = useHistory();
@@ -13,12 +13,12 @@ function Navbar({ click }) {
     return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
   };
 
-  const [memberName, setMemberName] = useState(
-    localStorage.getItem("memberName") ?  localStorage.getItem("memberName") : ''
+  const [paymentAddress, setPaymentAddress] = useState(
+    localStorage.getItem("paymentAddress") ?  JSON.parse(localStorage.getItem("paymentAddress")) : ''
   );
 
   const logoutHandler = () => {
-    localStorage.removeItem("memberName");
+    localStorage.removeItem("paymentAddress");
     history.push("/");
     history.go(0);
   };
@@ -29,7 +29,7 @@ function Navbar({ click }) {
     <nav className="navbar">
       <div className="navbar__logo">
         <Link to="/">
-          <h2>JAK Shopping Cart</h2>
+          <h2>JAK SHOPPING</h2>
         </Link>
       </div>
       <ul className="navbar__links">
@@ -38,15 +38,15 @@ function Navbar({ click }) {
             <i className="fas fa-shopping-cart"></i>
             <span>
               Cart
-              <span className="cartlogo__badge">{getCartCount()}</span>
+              <span className="cartlogo__badge">{ getCartCount()}</span>
             </span>
           </Link>
         </li>
         <li>
-          {memberName!==''? (
+          {paymentAddress? (
             <>
               <Link to="/member" className="link__member">
-                {memberName}
+                {paymentAddress.firstName}
               </Link>
               <div onClick={logoutHandler} className="link__logout">
                 Logout
