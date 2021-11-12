@@ -9,6 +9,13 @@
 
 .successform__title {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #dd219e;
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 640px) {
+    .successform {
+      width: 25rem;
+    }
   }

@@ -67,9 +67,9 @@ const PaymentForm = () => {
   };
 
   const paymentHandler = () => {
-    setActiveStep(3);
     localStorage.removeItem("cart");
-    window.location.href = "/";
+    window.location.href = "/checkout";
+    //setActiveStep(3);
   };
 
   return (

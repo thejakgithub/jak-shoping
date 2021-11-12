@@ -16,10 +16,15 @@ const CheckoutPage = () => {
     postalCode: "",
   });
 
+  const [activeStep, setActiveStep] = useState(1);
 
-  const [activeStep, setActiveStep] = useState(
-    localStorage.getItem("paymentAddress") ? 2 : 1
-  );
+  useEffect(() => {
+    localStorage.getItem("cart")
+      ? localStorage.getItem("paymentAddress")
+        ? setActiveStep(2)
+        : setActiveStep(1)
+      : setActiveStep(3)
+  }, []);
 
   return (
     <div className="checkoutpage">
@@ -27,7 +32,9 @@ const CheckoutPage = () => {
         <li
           style={{ cursor: "pointer" }}
           className={activeStep >= 1 ? "active" : ""}
-          onClick={() => setActiveStep(1)}
+          onClick={
+            localStorage.getItem("paymentAddress") ? "" : () => setActiveStep(1)
+          }
         >
           ที่อยู่การจัดส่ง
         </li>
